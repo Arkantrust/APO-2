@@ -25,6 +25,14 @@ public class Main{
     System.out.println("f(3) = " + r.fibonacci(3));
     System.out.println("f(4) = " + r.fibonacci(4));
 
+    System.out.println("Fibonacci Dp Example:");
+
+    System.out.println("f(0) = " + r.fibonacciDp(0));
+    System.out.println("f(1) = " + r.fibonacciDp(1));
+    System.out.println("f(2) = " + r.fibonacciDp(2));
+    System.out.println("f(3) = " + r.fibonacciDp(3));
+    System.out.println("f(4) = " + r.fibonacciDp(4));
+
 
 	}
 }

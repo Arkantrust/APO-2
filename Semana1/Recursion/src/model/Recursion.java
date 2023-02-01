@@ -4,9 +4,18 @@
 
 package model;
 
+import java.util.ArrayList;
+
 public class Recursion{
 
-	public Recursion(){  }
+	private ArrayList<Integer> dp; 
+
+	public Recursion(){
+		dp = new ArrayList<Integer>(); 
+		for(int i = 0; i < 100; i++){
+			dp.add(null); 
+		}
+	}
 
 
 	// f(n) = n * f(n-1) -> Definición de la función factorial.
@@ -28,5 +37,26 @@ public class Recursion{
 		// llamado recursivo
 		return fibonacci(n - 1) + fibonacci(n - 2);
 	}
+
+
+	public int fibonacciDp(int n){
+		if(dp.get(n) == null){
+			// Casos base 
+			if(n == 0 || n == 1){
+				dp.set(n, n); 
+				return n; 
+			}
+			// llamado recursivo
+			int result = fibonacciDp(n - 1) + fibonacciDp(n - 2); 
+			dp.set(n, result); 
+			return result;
+		}
+		else{
+			return dp.get(n); 
+		}
+
+	}
+
+
 
 }
