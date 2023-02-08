@@ -41,6 +41,30 @@ public class LinkedList {
 
 	}
 
+	public Node search(int goal){
+		return search(goal, this.head); 
+	}
+
+	private Node search(int goal, Node current){
+		// Caso base 
+		if(current == null){
+			return null; 
+		}
+
+		// caso borde 
+		if(goal == head.getValue() && current.equals(this.head)){
+			return this.head; 
+		}
+
+		if(goal == tail.getValue() && current.equals(this.tail)){
+			return this.tail; 
+		}
+		if(goal == current.getValue()){
+			return current; 
+		}
+
+		return search(goal, current.getNext()); 
+	}
 
 
 }
