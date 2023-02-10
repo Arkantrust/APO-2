@@ -15,6 +15,6 @@ public class Main{
 		listL.addLast(new Node(5));
 		listL.addLast(new Node(6));
 
-		listL.print();
+		System.out.println(listL.printList());  
 	}
 }
