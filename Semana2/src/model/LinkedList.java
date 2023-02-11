@@ -55,7 +55,7 @@ public class LinkedList {
 
 	private String printList(Node current, String msj){
 		if(current == null){
-			return msj + " ]"; 
+			return msj + "]"; 
 		}
 
 		msj += current.getValue() + " "; 
