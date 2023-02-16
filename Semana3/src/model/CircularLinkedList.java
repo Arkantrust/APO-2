@@ -92,16 +92,19 @@ public class CircularLinkedList {
 		if(goal == current.getValue()){
 			return current; 
 		}
+		if(current == this.tail && goal != this.tail.getValue()){
+			return null; 
+		}
 
 		return search(goal, current.getNext()); 
 	}
 
 	// triger de la función
 	public void delete(int goal){
-		delete(goal, null, head);
+		delete(goal, head);
 	}
 
-	private void delete(int goal, Node previous, Node current){
+	private void delete(int goal, Node current){
 		//Casos base
 		if(current == null){
 			return;
@@ -111,19 +114,19 @@ public class CircularLinkedList {
 			head = current.getNext();
 			return;
 		}
-		// Segundo caso borde elimina la cabeza 
+		// Segundo caso borde elimina la cola
 		if(tail.getValue() == goal && tail == current){
-			previous.setNext(null);
-			tail = previous;
+			current.getPrevious().setNext(null); //  previous.setNext(null);
+			tail = current.getPrevious(); // previous;
 			return;
 		}
 		// Caso intermedio 
 		if(current.getValue() == goal){
-			previous.setNext(current.getNext());
+			current.getPrevious().setNext(current.getNext()); // previous.setNext(current.getNext());
 			return;
 		}
 		//Llamado recursivo
-		delete(goal, current, current.getNext());
+		delete(goal, current.getNext());
 		//      ^       ^           ^
 		//      |       |           | 
 		// objetivo  previous    current

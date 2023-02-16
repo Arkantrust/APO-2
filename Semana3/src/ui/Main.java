@@ -5,7 +5,7 @@ public class Main{
 
 	public static void main(String[] args) {
 		
-		LinkedList listL = new LinkedList(); 
+		CircularLinkedList listL = new CircularLinkedList(); 
 
 		listL.addLast(new Node(0));
 		listL.addLast(new Node(1));
@@ -20,6 +20,7 @@ public class Main{
 		System.out.println(listL.search(0)); // imprime la cabeza de la lista
 		System.out.println(listL.search(6)); // imprime la cola de la lista
 		System.out.println(listL.search(3)); // imprime el caso intermedio
+		System.out.println("el nodo no existe: "+listL.search(9)); // el nodo no existe
 
 		// elimina la cabeza 
 		System.out.println("Elimino la cabeza");
@@ -34,6 +35,11 @@ public class Main{
 		// caso intermedio 
 		System.out.println("Elimino un nodo intermedio");
 		listL.delete(3);
+		System.out.println(listL.printList());
+
+		// elimina un valor que no existe
+		System.out.println("El nodo no existe");
+		listL.delete(9);
 		System.out.println(listL.printList());
 
 	}
