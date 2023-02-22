@@ -39,6 +39,39 @@ public class BST {
 		}
 	}
 
+	public Node search(int goal){
+		return search(goal, root); 
+	}
+
+	private Node search(int goal, Node current){
+
+		if(current == null){
+			return null; 
+		}
+		if(current.getValue() == goal){
+			return current; 
+		}
+		if(current.getValue() < goal){
+			return search(goal, current.getRight()); 
+		}
+		else{
+			return search(goal, current.getLeft()); 
+		}
+	}
+
+	public Node getMax(){
+		return getMax(root);
+	}
+
+	private Node getMax(Node current){
+		if(current.getRight() == null){
+			return current; 
+		}
+		else{
+			return getMax(current.getRight()); 
+		}
+	}
+
 	public void inOrder(){
 		inOrder(root); 
 	}
