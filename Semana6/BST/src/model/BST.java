@@ -1,4 +1,5 @@
 package model; 
+import exception.NotEqualNodeException; 
 
 public class BST {
 
@@ -11,11 +12,16 @@ public class BST {
 			root = node; 
 		}
 		else{
-			insert(node, root); 
+			try{
+				insert(node, root); 
+			}
+			catch(NotEqualNodeException ne){
+				System.out.println(ne.getMessage());
+			}
 		}
 	}
 
-	private void insert(Node node, Node current){
+	private void insert(Node node, Node current) throws NotEqualNodeException{
 		try{
 			// Izquierda 
 			if(node.getValue() < current.getValue()){
@@ -37,6 +43,8 @@ public class BST {
 			}
 			else{
 				// los nodos son iguales 
+				System.out.println("estoy en la exception");
+				throw new NotEqualNodeException("No se puede agregar un nodo que ya exista en el arbol");
 			}
 
 		} catch(NullPointerException ne){
