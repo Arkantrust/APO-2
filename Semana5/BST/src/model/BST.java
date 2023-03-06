@@ -141,7 +141,7 @@ public class BST {
 			}
 			//4. Nodo con dos hijos
 			else{
-				// predecesor 
+				// sucesor
 				Node min = getMin(current.getRight());
 				//Transferencia de valores, NUNCA de conexiones
 				current.setValue(min.getValue());
