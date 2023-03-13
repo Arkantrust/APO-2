@@ -10,7 +10,7 @@ public class Contact {
 	private String phone;
 	private String email;
 
-	public Contact(String name, String phone, String email) {
+	public Contact(String name, String phone, String email) throws EmptyFieldException{
 		if(name == null || name.isEmpty()
 				|| phone == null || phone.isEmpty() 
 				|| email == null || email.isEmpty())

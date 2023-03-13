@@ -1,6 +1,6 @@
 package exceptions; 
 
-public class EmptyFieldException extends RuntimeException {
+public class EmptyFieldException extends Exception {
 
 	public EmptyFieldException() { }
 
