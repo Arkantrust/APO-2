@@ -1,0 +1,5 @@
+Hola desde el archivo de texto plano
+Hola desde otra linea
+linea 3
+cuarta linea
+otra linea
