@@ -11,33 +11,33 @@ public class Main {
         numbers.add(-4);
 
         // Selection sort
-        for (int i = 0; i < numbers.size(); i++){
-            for (int j = i+1; j < numbers.size(); j++){
-                if(numbers.get(i) > numbers.get(j)){
-                    int actual = numbers.get(i);
-                    int next = numbers.get(j);
-                    numbers.set(i, next);
-                    numbers.set(j, actual);
-                }
-            }
-        }
-
-        for (int n: numbers) {
-            System.out.print(n+" ");
-        }
-
-
-        // Bubble sort by Sebastian
-        for(int i = 0; i < numbers.size(); i++){
-            for(int j = 0; j < numbers.size(); j++){
-                if(numbers.get(i) < numbers.get(j)){
-                    int actual = numbers.get(i);
-                    int next = numbers.get(j);
-                    numbers.set(i, next);
-                    numbers.set(j, actual);
-                }
-            }
-        }
+//        for (int i = 0; i < numbers.size(); i++){
+//            for (int j = i+1; j < numbers.size(); j++){
+//                if(numbers.get(i) > numbers.get(j)){
+//                    int actual = numbers.get(i);
+//                    int next = numbers.get(j);
+//                    numbers.set(i, next);
+//                    numbers.set(j, actual);
+//                }
+//            }
+//        }
+//
+//        for (int n: numbers) {
+//            System.out.print(n+" ");
+//        }
+//
+//
+//        // Bubble sort by Sebastian
+//        for(int i = 0; i < numbers.size(); i++){
+//            for(int j = 0; j < numbers.size(); j++){
+//                if(numbers.get(i) < numbers.get(j)){
+//                    int actual = numbers.get(i);
+//                    int next = numbers.get(j);
+//                    numbers.set(i, next);
+//                    numbers.set(j, actual);
+//                }
+//            }
+//        }
 
 
         // Bubble sort
