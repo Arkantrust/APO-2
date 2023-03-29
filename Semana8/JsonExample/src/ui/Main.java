@@ -23,8 +23,8 @@ public class Main {
         Gson gson = new Gson();
 
         File projectDir = new File(System.getProperty("user.dir"));
-        File dataDirectory = new File(projectDir.getName()+"/data");
-        File result = new File(projectDir.getName()+"/data/result.json");
+        File dataDirectory = new File(projectDir+"/data");
+        File result = new File(projectDir+"/data/result.json");
 
         if(!dataDirectory.exists()){
             dataDirectory.mkdirs();
